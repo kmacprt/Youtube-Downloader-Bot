@@ -1,0 +1,8 @@
+downloads/*
+*.session
+__pycache__/
+*.pyc
+log.txt
+venv/
+.idea/
+pythonenv3.8/
