@@ -13,7 +13,7 @@ async def ytdl(_, message):
     try:
         if userLastDownloadTime > datetime.now():
             wait_time = round((userLastDownloadTime - datetime.now()).total_seconds() / 60, 2)
-            await message.reply_text(f"`Wait {wait_time} Minutes before next Request`")
+            await message.reply_text(f"`ඉන්න {wait_time} ඊළඟ ඉල්ලීමට මිනිත්තු කිහිපයකට පෙර😌`")
             return
     except:
         pass
@@ -28,10 +28,10 @@ async def ytdl(_, message):
                                      timedelta(minutes=youtube_next_fetch)
 
     except Exception:
-        await message.reply_text("`Failed To Fetch Youtube Data... 😔 \nPossible Youtube Blocked server ip \n#error`")
+        await message.reply_text("`යූ ටියුබ් දත්ත ලබා ගැනීමට අපොහොසත් විය ... 😔 \nYoutube සේවාදායකයේ අන්තර්ජාල නියමාවලි අවහිර වි ඇත.  \n#දෝෂයකි`")
         return
     buttons = InlineKeyboardMarkup(create_buttons(formats))
-    sentm = await message.reply_text("Processing Youtube Url 🔎 🔎 🔎")
+    sentm = await message.reply_text("යූටියුබ් යූආර්එල් සැකසීම ▪️▪️▪️👀")
     try:
         # Todo add webp image support in thumbnail by default not supported by pyrogram
         # TODO fix some 10 sec video for fetching details idk why but its not working
@@ -42,4 +42,4 @@ async def ytdl(_, message):
         await message.reply_text(text = title, reply_markup=buttons)
         print(e)
         await sentm.edit(
-            f"<code>Error Occurs Due To Youtube-dl not able To Fetch </code>{title} <code>Details</code>  #Error")
+            f"<code>යූටියුබ්-ඩීඑල් ලබා ගැනීමට නොහැකි වීම නිසා දෝෂයක් ඇතිවිය🤕</code>{title} <code>විස්තර</code>  #දෝෂයකි")
