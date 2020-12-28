@@ -1,7 +1,7 @@
 # Youtube-Downloader-Bot
 
 # Deploy(Heroku)
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/CyberBoyAyush/Youtube-Downloader-Bot/tree/master)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kmacprt/Youtube-Downloader-Bot/tree/master)
 
 ## Prerequisite
     ffmpeg
